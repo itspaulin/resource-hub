@@ -1,6 +1,6 @@
 import { Either, left, right } from '@/core/either';
 import { UserRole } from '../../enterprise/entities/enums/role.enum';
-import { UserAlreadyExistsError } from './errors/UserAlreadyExists';
+import { UserAlreadyExistsError } from './errors/user-already-exists';
 import { User } from '../../enterprise/entities/user';
 import { Injectable } from '@nestjs/common';
 import { UsersRepository } from '../repositories/user-repository';
