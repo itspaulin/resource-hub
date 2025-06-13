@@ -1,4 +1,4 @@
-import { UniqueEntityId } from '@/core/entites/unique-entity-id';
+import { UniqueEntityId } from '@/core/entities/unique-entity-id';
 import { UserRole } from '@/domain/user/enterprise/entities/enums/role.enum';
 import { User } from '@/domain/user/enterprise/entities/user';
 import { User as PrismaUser, Prisma } from '@prisma/client';

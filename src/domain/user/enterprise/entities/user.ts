@@ -1,9 +1,9 @@
-import { Entity } from 'src/core/entites/entity';
+import { Entity } from '@/core/entities/entity';
 import { UserRole } from './enums/role.enum';
 import { Optional } from 'src/core/@types/Optional';
-import { UniqueEntityId } from 'src/core/entites/unique-entity-id';
+import { UniqueEntityId } from '@/core/entities/unique-entity-id';
 
-interface UserProps {
+export interface UserProps {
   name: string;
   email: string;
   password: string;
