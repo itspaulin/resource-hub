@@ -6,7 +6,7 @@ import { PrismaService } from '@/infra/database/prisma/prisma.service';
 import { PrismaUserMapper } from '@/infra/database/prisma/mappers/prisma-user-mapper';
 import { UserRole } from '@/domain/user/enterprise/entities/enums/role.enum';
 
-export function makeStudent(
+export function makeUser(
   override: Partial<UserProps> = {},
   id?: UniqueEntityId,
 ) {
@@ -28,8 +28,8 @@ export function makeStudent(
 export class UserFactory {
   constructor(private prisma: PrismaService) {}
 
-  async makePrismaStudent(data: Partial<UserProps> = {}): Promise<User> {
-    const user = makeStudent(data);
+  async makePrismaUser(data: Partial<UserProps> = {}): Promise<User> {
+    const user = makeUser(data);
 
     await this.prisma.user.create({
       data: PrismaUserMapper.toPrisma(user),
