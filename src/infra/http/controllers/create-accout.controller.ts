@@ -1,5 +1,4 @@
 import {
-  HttpCode,
   Body,
   Controller,
   Post,
@@ -27,7 +26,6 @@ export class CreateAccountController {
   constructor(private readonly registerUserService: RegisterUserService) {}
 
   @Post()
-  @HttpCode(201)
   @UsePipes(new ZodValidationPipe(createAccountBodySchema))
   async handle(@Body() body: CreateAccountSchema) {
     const { name, email, password } = createAccountBodySchema.parse(body);
